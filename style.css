@@ -75,7 +75,8 @@ h6 {
 :root{
     --bright-text-color: #fae8ff;
     --bright-background-color: #faf5ff;
-    --accent-color: #c026d3;
+    --accent-color: #E6007E;
+    --secondary-accent-color: #00B074;
     --main-content-bg-color: #e6e6e6;
 }
 
@@ -181,7 +182,7 @@ button, input {
 }
 
 .button-group button {
-    background-color: #c026d3;
+    background-color: var(--accent-color);
     color: var(--bright-text-color);
     padding: 10px 30px 10px 30px;
     border-radius: 30px;
@@ -238,9 +239,10 @@ input[type=search]{
     background-color: var(--main-content-bg-color);
     padding: 20px;
     display: grid;
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 15px;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 30px 1fr;
+    grid-template-rows: 30px auto 30px auto;
 }
 
 .projects-card-container {
@@ -248,7 +250,7 @@ input[type=search]{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     grid-column: 1 / 2;
-    grid-row: 2 / 4;
+    grid-row: 2 / 5;
 }
 
 .my-project-card {
@@ -257,7 +259,7 @@ input[type=search]{
     background-color: #faf5ff;
     gap: 60px;
     border-radius: 15px;
-    border-left: 10px solid #c026d3;
+    border-left: 10px solid var(--secondary-accent-color);
     padding: 25px;
     justify-content: space-between;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -293,9 +295,6 @@ input[type=search]{
     padding: 25px;
     border-radius: 25px;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
-}
-
-.trending-container {
     display: grid;
     grid-template-columns: 40px 1fr;
     align-items: center;
